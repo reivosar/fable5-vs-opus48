@@ -27,6 +27,32 @@ Five tricks, each copying a habit Fable 5 has by default:
 
 The banner line is the whole theory: habits can be copied, brainpower cannot.
 
+## Recommended settings
+
+This repo ships [.claude/settings.json](.claude/settings.json) — the setup
+that makes Opus 4.8 worth it (quality up, cost still half of Fable 5):
+
+- `model: claude-opus-4-8` — half the per-token price of Fable 5
+- `alwaysThinkingEnabled: true` — copies Fable's think-first habit; adaptive
+  thinking only spends tokens when the task needs it
+- `effortLevel: high` — the sweet spot; raise to `xhigh` per hard task
+  instead of pinning it globally
+- `autoCompactEnabled: true` — keeps long sessions from bloating the context
+
+Equivalent API call:
+
+```python
+client.messages.create(
+    model="claude-opus-4-8",
+    max_tokens=16000,                      # 64000 at xhigh
+    thinking={"type": "adaptive"},
+    output_config={"effort": "high"},      # "xhigh" for hard coding/agents
+    system=[{"type": "text", "text": FROZEN_PROMPT,
+             "cache_control": {"type": "ephemeral"}}],  # ~90% off cached input
+    messages=[...],
+)
+```
+
 ## One paragraph more, if you care
 
 They are different models, not different settings: Fable 5 is a new tier
