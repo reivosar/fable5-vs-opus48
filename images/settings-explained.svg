@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1290" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrTeal" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1290" fill="#ffffff"/>
+
+  <text x="600" y="48" font-size="27" font-weight="bold" fill="#111827" text-anchor="middle">What each setting does — with it vs without it</text>
+  <text x="600" y="76" font-size="14" fill="#6b7280" text-anchor="middle">one row per line of .claude/settings.json</text>
+
+  <!-- column headers -->
+  <text x="220" y="122" font-size="14" font-weight="bold" fill="#94a3b8" text-anchor="middle">THE LINE IN THE FILE</text>
+  <text x="570" y="122" font-size="14" font-weight="bold" fill="#94a3b8" text-anchor="middle">WITHOUT IT (silent default)</text>
+  <text x="950" y="122" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">WITH IT</text>
+
+  <!-- ============ ROW 1: model ============ -->
+  <rect x="60" y="140" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="142" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="155" x2="380" y2="285" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="152" width="180" height="24" rx="12" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="1030" y="169" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">changes behavior</text>
+
+  <rect x="85" y="195" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="217" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"model":</text>
+  <text x="220" y="238" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">"claude-opus-4-8"</text>
+
+  <!-- dice -->
+  <rect x="428" y="218" width="34" height="34" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <circle cx="437" cy="227" r="2.5" fill="#64748b"/>
+  <circle cx="454" cy="227" r="2.5" fill="#64748b"/>
+  <circle cx="445" cy="235" r="2.5" fill="#64748b"/>
+  <circle cx="437" cy="244" r="2.5" fill="#64748b"/>
+  <circle cx="454" cy="244" r="2.5" fill="#64748b"/>
+  <text x="500" y="225" font-size="13" fill="#374151">Your plan picks the model.</text>
+  <text x="500" y="248" font-size="13" fill="#374151">It can differ per machine, per day.</text>
+
+  <!-- flag -->
+  <line x1="815" y1="212" x2="815" y2="258" stroke="#0f766e" stroke-width="3"/>
+  <polygon points="815,212 845,221 815,230" fill="#0f766e"/>
+  <text x="880" y="225" font-size="13" fill="#374151">Pinned: Opus 4.8 on every turn,</text>
+  <text x="880" y="248" font-size="13" fill="#374151">on every machine that opens this repo.</text>
+
+  <!-- ============ ROW 2: effortLevel ============ -->
+  <rect x="60" y="315" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="317" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="330" x2="380" y2="460" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="327" width="180" height="24" rx="12" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="1030" y="344" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">changes behavior</text>
+
+  <rect x="85" y="370" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="392" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"effortLevel":</text>
+  <text x="220" y="413" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">"high"</text>
+
+  <!-- gauge xhigh + 3 coins -->
+  <path d="M415,425 A 30 30 0 0 1 475,425" fill="none" stroke="#e2e8f0" stroke-width="8"/>
+  <line x1="445" y1="425" x2="471" y2="411" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="430" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <circle cx="447" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <circle cx="464" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <text x="500" y="400" font-size="13" fill="#374151">Claude Code sets Opus to xhigh:</text>
+  <text x="500" y="423" font-size="13" fill="#374151">the strongest — and priciest — level,</text>
+  <text x="500" y="446" font-size="13" fill="#374151">even for trivial asks.</text>
+
+  <!-- gauge high + 2 coins -->
+  <path d="M795,425 A 30 30 0 0 1 855,425" fill="none" stroke="#e2e8f0" stroke-width="8"/>
+  <line x1="825" y1="425" x2="841" y2="401" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="812" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <circle cx="829" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+  <text x="880" y="400" font-size="13" fill="#374151">high: same quality on daily work,</text>
+  <text x="880" y="423" font-size="13" fill="#374151">noticeably fewer tokens burned.</text>
+  <text x="880" y="446" font-size="13" fill="#374151">Raise per session only when needed.</text>
+
+  <!-- ============ ROW 3: max output tokens ============ -->
+  <rect x="60" y="490" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="492" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="505" x2="380" y2="635" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="502" width="180" height="24" rx="12" fill="#ffedd5" stroke="#ea580c"/>
+  <text x="1030" y="519" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">changes behavior</text>
+
+  <rect x="85" y="545" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="567" font-size="12" font-family="monospace" fill="#e2e8f0" text-anchor="middle">CLAUDE_CODE_MAX_OUTPUT</text>
+  <text x="220" y="588" font-size="12" font-family="monospace" fill="#7dd3fc" text-anchor="middle">_TOKENS: "64000"</text>
+
+  <!-- line hits wall -->
+  <line x1="415" y1="570" x2="460" y2="570" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+  <rect x="464" y="548" width="8" height="45" fill="#dc2626"/>
+  <text x="500" y="563" font-size="13" fill="#374151">Harness picks a lower cap:</text>
+  <text x="500" y="586" font-size="13" fill="#374151">a long answer can get cut off</text>
+  <text x="500" y="609" font-size="13" fill="#374151">mid-thought and need a retry.</text>
+
+  <!-- open road -->
+  <line x1="795" y1="570" x2="852" y2="570" stroke="#0f766e" stroke-width="5" stroke-linecap="round" marker-end="url(#arrTeal)"/>
+  <text x="880" y="563" font-size="13" fill="#374151">Room to finish long answers.</text>
+  <text x="880" y="586" font-size="13" fill="#374151">Costs nothing extra: only tokens</text>
+  <text x="880" y="609" font-size="13" fill="#374151">actually generated are billed.</text>
+
+  <!-- ============ ROW 4: alwaysThinkingEnabled ============ -->
+  <rect x="60" y="665" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="667" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="680" x2="380" y2="810" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="677" width="180" height="24" rx="12" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="1030" y="694" font-size="12" font-weight="bold" fill="#475569" text-anchor="middle">same - now visible</text>
+
+  <rect x="85" y="720" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="742" font-size="13" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"alwaysThinkingEnabled":</text>
+  <text x="220" y="763" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">true</text>
+
+  <!-- faded gears -->
+  <circle cx="432" cy="735" r="7" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <circle cx="432" cy="775" r="11" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="464" y="760" font-size="20" fill="#cbd5e1">?</text>
+  <text x="500" y="738" font-size="13" fill="#374151">Already on — but invisible:</text>
+  <text x="500" y="761" font-size="13" fill="#374151">nothing in your project says</text>
+  <text x="500" y="784" font-size="13" fill="#374151">how thinking is configured.</text>
+
+  <!-- solid gears sized to task -->
+  <circle cx="815" cy="735" r="7" fill="none" stroke="#0f766e" stroke-width="3"/>
+  <rect x="832" y="729" width="12" height="12" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="815" cy="775" r="11" fill="none" stroke="#0f766e" stroke-width="3.5"/>
+  <rect x="832" y="763" width="24" height="24" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <text x="880" y="738" font-size="13" fill="#374151">Written down: thinking scales</text>
+  <text x="880" y="761" font-size="13" fill="#374151">with task size by itself —</text>
+  <text x="880" y="784" font-size="13" fill="#374151">small ask, small spend.</text>
+
+  <!-- ============ ROW 5: autoCompactEnabled ============ -->
+  <rect x="60" y="840" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="842" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="855" x2="380" y2="985" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="852" width="180" height="24" rx="12" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="1030" y="869" font-size="12" font-weight="bold" fill="#475569" text-anchor="middle">same - now visible</text>
+
+  <rect x="85" y="895" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="917" font-size="13" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"autoCompactEnabled":</text>
+  <text x="220" y="938" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">true</text>
+
+  <!-- big balloon -->
+  <circle cx="445" cy="920" r="26" fill="#fee2e2" stroke="#ef4444" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="500" y="913" font-size="13" fill="#374151">Already on — silent: history</text>
+  <text x="500" y="936" font-size="13" fill="#374151">quietly balloons, then gets</text>
+  <text x="500" y="959" font-size="13" fill="#374151">summarized behind your back.</text>
+
+  <!-- compacted balloon -->
+  <circle cx="825" cy="920" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="790" y1="920" x2="803" y2="920" stroke="#16a34a" stroke-width="3" marker-end="url(#arrGreen)"/>
+  <line x1="860" y1="920" x2="847" y2="920" stroke="#16a34a" stroke-width="3" marker-end="url(#arrGreen)"/>
+  <text x="880" y="913" font-size="13" fill="#374151">Explicit: long sessions get</text>
+  <text x="880" y="936" font-size="13" fill="#374151">squeezed on purpose, and the</text>
+  <text x="880" y="959" font-size="13" fill="#374151">file tells you it will happen.</text>
+
+  <!-- ============ ROW 6: fastMode ============ -->
+  <rect x="60" y="1015" width="1080" height="160" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="762" y="1017" width="376" height="156" rx="10" fill="#f0fdf4"/>
+  <line x1="380" y1="1030" x2="380" y2="1160" stroke="#f1f5f9" stroke-width="2"/>
+  <rect x="940" y="1027" width="180" height="24" rx="12" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="1030" y="1044" font-size="12" font-weight="bold" fill="#475569" text-anchor="middle">guard rail</text>
+
+  <rect x="85" y="1070" width="270" height="54" rx="8" fill="#1e293b"/>
+  <text x="220" y="1092" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"fastMode":</text>
+  <text x="220" y="1113" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">false</text>
+
+  <!-- toggle + price tag -->
+  <rect x="415" y="1082" width="64" height="28" rx="14" fill="#e5e7eb"/>
+  <circle cx="429" cy="1096" r="11" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"/>
+  <rect x="425" y="1118" width="46" height="20" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text x="448" y="1132" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">2.5x</text>
+  <text x="500" y="1088" font-size="13" fill="#374151">Off by default, but one</text>
+  <text x="500" y="1111" font-size="13" fill="#374151">accidental /fast away from</text>
+  <text x="500" y="1134" font-size="13" fill="#374151">premium-priced output.</text>
+
+  <!-- toggle + padlock -->
+  <rect x="795" y="1082" width="64" height="28" rx="14" fill="#e5e7eb"/>
+  <circle cx="809" cy="1096" r="11" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"/>
+  <path d="M872,1092 A 7 7 0 0 1 886,1092" fill="none" stroke="#475569" stroke-width="3"/>
+  <rect x="867" y="1092" width="24" height="17" rx="3" fill="#475569"/>
+  <text x="880" y="1131" font-size="13" fill="#374151" text-anchor="start"></text>
+  <text x="910" y="1088" font-size="13" fill="#374151">Locked off in writing:</text>
+  <text x="910" y="1111" font-size="13" fill="#374151">no surprise bills for speed</text>
+  <text x="910" y="1134" font-size="13" fill="#374151">nobody asked for.</text>
+
+  <!-- ============ BOTTOM BANNER ============ -->
+  <rect x="60" y="1200" width="1080" height="64" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="600" y="1228" font-size="17" font-weight="bold" fill="#111827" text-anchor="middle">Orange rows change what happens. Gray rows change nothing —</text>
+  <text x="600" y="1250" font-size="15" fill="#6b7280" text-anchor="middle">they make the invisible visible. A config file should read like a receipt.</text>
+</svg>

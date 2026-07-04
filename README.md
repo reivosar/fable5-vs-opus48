@@ -36,6 +36,10 @@ otherwise be silent defaults. **[.claude/README.md](.claude/README.md) maps
 each line to the exact API request field it controls** — read that to see
 what actually happens on every turn.
 
+What each line does, with it vs without it:
+
+![What each setting does](images/settings-explained.svg)
+
 Equivalent API call:
 
 ```python
