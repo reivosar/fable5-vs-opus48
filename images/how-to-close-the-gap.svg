@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1450" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1200" height="1450" fill="#ffffff"/>
+
+  <!-- ===================== TITLE ===================== -->
+  <text x="600" y="52" font-size="30" font-weight="bold" fill="#111827" text-anchor="middle">How to close the gap — and why each trick works</text>
+  <text x="600" y="84" font-size="15" fill="#6b7280" text-anchor="middle">these close the GREEN gap (habits) — the RED gap (brainpower) stays, see the first picture</text>
+
+  <!-- ===================== ROW 1: THINKING SWITCH ===================== -->
+  <rect x="60" y="120" width="1080" height="210" fill="#ffffff" stroke="#e5e7eb" rx="14"/>
+  <circle cx="100" cy="180" r="20" fill="#111827"/>
+  <text x="100" y="187" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- pictogram: head + thought gear + ON toggle -->
+  <circle cx="225" cy="255" r="32" fill="#cbd5e1"/>
+  <rect x="192" y="288" width="66" height="30" rx="15" fill="#cbd5e1"/>
+  <circle cx="258" cy="222" r="5" fill="#e2e8f0" stroke="#94a3b8"/>
+  <circle cx="272" cy="207" r="7" fill="#e2e8f0" stroke="#94a3b8"/>
+  <ellipse cx="310" cy="180" rx="46" ry="30" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="310" cy="180" r="11" fill="none" stroke="#475569" stroke-width="3"/>
+  <g stroke="#475569" stroke-width="3">
+    <line x1="310" y1="163" x2="310" y2="169"/>
+    <line x1="310" y1="191" x2="310" y2="197"/>
+    <line x1="293" y1="180" x2="299" y2="180"/>
+    <line x1="321" y1="180" x2="327" y2="180"/>
+    <line x1="298" y1="168" x2="302" y2="172"/>
+    <line x1="318" y1="188" x2="322" y2="192"/>
+    <line x1="322" y1="168" x2="318" y2="172"/>
+    <line x1="302" y1="188" x2="298" y2="192"/>
+  </g>
+  <rect x="300" y="260" width="84" height="36" rx="18" fill="#16a34a"/>
+  <circle cx="366" cy="278" r="14" fill="#ffffff"/>
+  <text x="324" y="284" font-size="14" font-weight="bold" fill="#ffffff">ON</text>
+
+  <text x="430" y="175" font-size="20" font-weight="bold" fill="#111827">Flip the thinking switch</text>
+  <g font-size="16" fill="#374151">
+    <text x="430" y="215">Fable 5 always thinks before it acts — built in.</text>
+    <text x="430" y="245">Opus 4.8 skips thinking unless you switch it on.</text>
+    <text x="430" y="275">Copy the habit, get much of the benefit.</text>
+  </g>
+  <rect x="860" y="210" width="250" height="44" rx="8" fill="#1e293b"/>
+  <text x="985" y="237" font-size="15" font-family="monospace" fill="#e2e8f0" text-anchor="middle">thinking: adaptive</text>
+
+  <!-- ===================== ROW 2: EFFORT DIAL ===================== -->
+  <rect x="60" y="370" width="1080" height="210" fill="#ffffff" stroke="#e5e7eb" rx="14"/>
+  <circle cx="100" cy="430" r="20" fill="#111827"/>
+  <text x="100" y="437" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- pictogram: gauge -->
+  <path d="M185,535 A 85 85 0 0 1 355,535" fill="none" stroke="#e2e8f0" stroke-width="14"/>
+  <path d="M330,475 A 85 85 0 0 1 355,535" fill="none" stroke="#16a34a" stroke-width="14"/>
+  <line x1="270" y1="535" x2="322" y2="483" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="270" cy="535" r="10" fill="#334155"/>
+  <text x="182" y="558" font-size="13" fill="#94a3b8">low</text>
+  <text x="358" y="558" font-size="13" fill="#16a34a" font-weight="bold" text-anchor="end">xhigh</text>
+
+  <text x="430" y="425" font-size="20" font-weight="bold" fill="#111827">Turn the effort dial up</text>
+  <g font-size="16" fill="#374151">
+    <text x="430" y="465">Effort buys more computing time per answer.</text>
+    <text x="430" y="495">It cannot raise the ceiling, but it reaches</text>
+    <text x="430" y="525">everything below it. Use xhigh for hard work.</text>
+  </g>
+  <rect x="860" y="445" width="250" height="70" rx="8" fill="#1e293b"/>
+  <text x="985" y="474" font-size="15" font-family="monospace" fill="#e2e8f0" text-anchor="middle">effort: xhigh</text>
+  <text x="985" y="500" font-size="15" font-family="monospace" fill="#e2e8f0" text-anchor="middle">max_tokens: 64000</text>
+
+  <!-- ===================== ROW 3: THE WHOLE MAP ===================== -->
+  <rect x="60" y="620" width="1080" height="210" fill="#ffffff" stroke="#e5e7eb" rx="14"/>
+  <circle cx="100" cy="680" r="20" fill="#111827"/>
+  <text x="100" y="687" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- pictogram: map with full route -->
+  <rect x="185" y="675" width="170" height="125" fill="#fffdf5" stroke="#94a3b8" stroke-width="1.5" rx="4"/>
+  <path d="M200,785 C 240,740 255,770 290,725 S 325,700 335,698"
+        fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="7 5"/>
+  <circle cx="200" cy="785" r="6" fill="#16a34a"/>
+  <line x1="335" y1="698" x2="335" y2="678" stroke="#0f766e" stroke-width="3"/>
+  <polygon points="335,678 357,684 335,690" fill="#0f766e"/>
+
+  <text x="430" y="675" font-size="20" font-weight="bold" fill="#111827">Hand over the whole map first</text>
+  <g font-size="16" fill="#374151">
+    <text x="430" y="715">Drift starts where guessing starts.</text>
+    <text x="430" y="745">A complete brief lets it plan the whole route</text>
+    <text x="430" y="775">instead of improvising halfway through.</text>
+  </g>
+  <rect x="860" y="695" width="250" height="70" rx="8" fill="#1e293b"/>
+  <text x="985" y="724" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">goal + limits + "done"</text>
+  <text x="985" y="750" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">all in the FIRST message</text>
+
+  <!-- ===================== ROW 4: SIGNPOSTS ===================== -->
+  <rect x="60" y="870" width="1080" height="210" fill="#ffffff" stroke="#e5e7eb" rx="14"/>
+  <circle cx="100" cy="930" r="20" fill="#111827"/>
+  <text x="100" y="937" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+
+  <!-- pictogram: signpost -->
+  <line x1="270" y1="920" x2="270" y2="1060" stroke="#92702a" stroke-width="7"/>
+  <polygon points="300,930 185,930 170,944 185,958 300,958" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="240" y="949" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">unsure? search</text>
+  <polygon points="240,970 355,970 370,984 355,998 240,998" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="300" y="989" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">big? split it</text>
+  <polygon points="300,1010 185,1010 170,1024 185,1038 300,1038" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="240" y="1029" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">done? test it</text>
+
+  <text x="430" y="925" font-size="20" font-weight="bold" fill="#111827">Put up signposts</text>
+  <g font-size="16" fill="#374151">
+    <text x="430" y="965">Opus 4.8 can search, delegate and self-check,</text>
+    <text x="430" y="995">but it politely waits to be asked.</text>
+    <text x="430" y="1025">Fable 5 does these by default. Write them down.</text>
+  </g>
+  <rect x="860" y="945" width="250" height="70" rx="8" fill="#1e293b"/>
+  <text x="985" y="974" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">system prompt:</text>
+  <text x="985" y="1000" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"when X, do Y"</text>
+
+  <!-- ===================== ROW 5: CHECKPOINTS ===================== -->
+  <rect x="60" y="1120" width="1080" height="210" fill="#ffffff" stroke="#e5e7eb" rx="14"/>
+  <circle cx="100" cy="1180" r="20" fill="#111827"/>
+  <text x="100" y="1187" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+
+  <!-- pictogram: line with checkpoints and snowballs -->
+  <line x1="170" y1="1255" x2="395" y2="1255" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+  <!-- snowballs growing before checkpoint 1 -->
+  <circle cx="190" cy="1232" r="4" fill="#cbd5e1"/>
+  <circle cx="204" cy="1229" r="7" fill="#cbd5e1"/>
+  <circle cx="219" cy="1225" r="10" fill="#94a3b8"/>
+  <!-- checkpoint 1 -->
+  <circle cx="245" cy="1255" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <path d="M239,1255 L244,1261 L252,1248" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <!-- snowballs reset, grow again -->
+  <circle cx="270" cy="1232" r="4" fill="#cbd5e1"/>
+  <circle cx="284" cy="1229" r="7" fill="#cbd5e1"/>
+  <circle cx="299" cy="1225" r="10" fill="#94a3b8"/>
+  <!-- checkpoint 2 -->
+  <circle cx="325" cy="1255" r="13" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <path d="M319,1255 L324,1261 L332,1248" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <!-- small snowball after -->
+  <circle cx="350" cy="1232" r="4" fill="#cbd5e1"/>
+  <circle cx="364" cy="1229" r="7" fill="#cbd5e1"/>
+  <text x="282" y="1300" font-size="12" fill="#64748b" text-anchor="middle">mistakes melt at every check</text>
+
+  <text x="430" y="1175" font-size="20" font-weight="bold" fill="#111827">Add checkpoints to long jobs</text>
+  <g font-size="16" fill="#374151">
+    <text x="430" y="1215">Small errors snowball over hours.</text>
+    <text x="430" y="1245">A checkpoint melts the snowball while small.</text>
+    <text x="430" y="1275">Four short climbs beat one long night.</text>
+  </g>
+  <rect x="860" y="1195" width="250" height="70" rx="8" fill="#1e293b"/>
+  <text x="985" y="1224" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">split into stages,</text>
+  <text x="985" y="1250" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">verify each one</text>
+
+  <!-- ===================== BOTTOM BANNER ===================== -->
+  <rect x="60" y="1360" width="1080" height="60" fill="#f8fafc" stroke="#cbd5e1" rx="12"/>
+  <rect x="130" y="1382" width="14" height="14" fill="#16a34a" rx="3"/>
+  <text x="152" y="1394" font-size="14" fill="#166534">green gap = habits</text>
+  <text x="600" y="1398" font-size="20" font-weight="bold" fill="#111827" text-anchor="middle">Habits can be copied. Brainpower cannot.</text>
+  <rect x="920" y="1382" width="14" height="14" fill="#dc2626" rx="3"/>
+  <text x="942" y="1394" font-size="14" fill="#991b1b">red gap = brainpower</text>
+</svg>

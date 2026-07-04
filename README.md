@@ -13,6 +13,20 @@ One picture:
 3. **Fable 5 costs 2x.** So: everyday work goes to Opus 4.8, only the
    hardest and longest jobs go to Fable 5.
 
+## How to close the gap — and why it works
+
+![How to close the gap](images/how-to-close-the-gap.svg)
+
+Five tricks, each copying a habit Fable 5 has by default:
+
+1. `thinking: adaptive` — Fable always thinks before acting; Opus skips it unless switched on.
+2. `effort: xhigh` — buys more computing per answer; reaches everything below the ceiling.
+3. Whole brief in the first message — drift starts where guessing starts.
+4. "When X, do Y" rules — Opus can search / delegate / self-check, but waits to be asked.
+5. Checkpoints on long jobs — errors snowball over hours; a check melts them while small.
+
+The banner line is the whole theory: habits can be copied, brainpower cannot.
+
 ## One paragraph more, if you care
 
 They are different models, not different settings: Fable 5 is a new tier
