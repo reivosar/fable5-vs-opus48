@@ -1,7 +1,7 @@
 # Claude Fable 5 vs Claude Opus 4.8 — Where the Difference Actually Lives
 
 Date: 2026-07-05
-Companion diagram: `fable5-vs-opus48-diff.svg`
+Companion diagram: `images/fable5-vs-opus48-diff.svg`
 
 ## 1. Executive summary
 

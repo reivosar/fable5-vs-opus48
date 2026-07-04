@@ -4,12 +4,14 @@ An analysis of where the difference between Claude Fable 5 (Mythos-class tier)
 and Claude Opus 4.8 actually lives — what is closable with prompting and API
 settings, and what is a property of the model itself.
 
+![Fable 5 vs Opus 4.8 — where the difference lives](images/fable5-vs-opus48-diff.svg)
+
 ## Contents
 
 | File | Description |
 |---|---|
 | [REPORT.md](REPORT.md) | Detailed report: public facts, capability gap analysis, prompting levers, routing recommendation |
-| [fable5-vs-opus48-diff.svg](fable5-vs-opus48-diff.svg) | One-page visual summary of the differences |
+| [images/fable5-vs-opus48-diff.svg](images/fable5-vs-opus48-diff.svg) | One-page visual summary of the differences |
 
 ## TL;DR
 
