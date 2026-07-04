@@ -1,145 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1560" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="Helvetica, Arial, sans-serif">
   <defs>
-    <style>
-      .h1 { font-size: 28px; font-weight: bold; fill: #1a1a1a; }
-      .h2 { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
-      .h3 { font-size: 15px; font-weight: bold; }
-      .label { font-size: 13px; font-weight: bold; fill: #6b7280; }
-      .body { font-size: 13px; fill: #374151; }
-      .small { font-size: 11px; fill: #6b7280; }
-      .opus { fill: #334155; }
-      .fable { fill: #0f766e; }
-      .card { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; rx: 8; }
-      .opuscard { fill: #f8fafc; stroke: #334155; stroke-width: 1.5; rx: 8; }
-      .fablecard { fill: #f0fdfa; stroke: #0f766e; stroke-width: 1.5; rx: 8; }
-    </style>
+    <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#dcfce7"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#16a34a" stroke-width="2"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9ca3af"/>
+    </marker>
   </defs>
 
-  <rect width="1200" height="1560" fill="#ffffff"/>
+  <rect width="1200" height="780" fill="#ffffff"/>
 
   <!-- Title -->
-  <text x="60" y="56" class="h1">Claude Fable 5 vs Claude Opus 4.8</text>
-  <text x="60" y="84" font-size="16" fill="#6b7280">Where the difference actually lives — and what prompting can / cannot close</text>
+  <text x="600" y="48" font-size="26" font-weight="bold" fill="#111827" text-anchor="middle">Fable 5 vs Opus 4.8</text>
+  <text x="600" y="74" font-size="14" fill="#6b7280" text-anchor="middle">capability gap = closable behavior + non-closable compute</text>
 
-  <!-- ============ SECTION 1: Spec comparison ============ -->
-  <text x="60" y="140" class="h2">1. Public facts (API surface and pricing)</text>
+  <!-- =============== LEFT: capability bars =============== -->
+  <text x="80" y="122" font-size="15" font-weight="bold" fill="#374151">What prompting recovers</text>
 
-  <rect x="60" y="160" width="520" height="330" class="opuscard"/>
-  <text x="84" y="192" class="h3 opus">Claude Opus 4.8</text>
-  <text x="84" y="212" class="small">claude-opus-4-8 — Opus family</text>
+  <!-- baseline -->
+  <line x1="100" y1="600" x2="560" y2="600" stroke="#9ca3af" stroke-width="2"/>
 
-  <rect x="620" y="160" width="520" height="330" class="fablecard"/>
-  <text x="644" y="192" class="h3 fable">Claude Fable 5</text>
-  <text x="644" y="212" class="small">claude-fable-5 — Mythos class (new tier above Opus)</text>
+  <!-- Opus raw capability bar -->
+  <rect x="140" y="280" width="120" height="320" fill="#334155" rx="4"/>
+  <!-- prompting extension (hatched) -->
+  <rect x="140" y="190" width="120" height="90" fill="url(#hatch)" stroke="#16a34a" stroke-width="2" rx="4"/>
 
-  <!-- rows -->
-  <g class="body">
-    <text x="84" y="248" class="label">PRICE / MTok</text>
-    <text x="84" y="266">$5 input / $25 output</text>
-    <text x="644" y="248" class="label">PRICE / MTok</text>
-    <text x="644" y="266">$10 input / $50 output — exactly 2x</text>
-    <text x="644" y="282" class="small">2x price at identical limits = genuinely higher inference cost</text>
+  <!-- Fable bar -->
+  <rect x="360" y="120" width="120" height="480" fill="#0f766e" rx="4"/>
 
-    <text x="84" y="312" class="label">THINKING</text>
-    <text x="84" y="330">Optional mode. Omitted = no thinking.</text>
-    <text x="84" y="346">{type: "disabled"} accepted.</text>
-    <text x="644" y="312" class="label">THINKING</text>
-    <text x="644" y="330">Always on at the architecture level.</text>
-    <text x="644" y="346">{type: "disabled"} returns HTTP 400.</text>
+  <!-- bar labels -->
+  <text x="200" y="628" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Opus 4.8</text>
+  <text x="420" y="628" font-size="15" font-weight="bold" fill="#0f766e" text-anchor="middle">Fable 5</text>
 
-    <text x="84" y="376" class="label">CONTEXT / OUTPUT / TOKENIZER</text>
-    <text x="84" y="394">1M / 128K / Opus 4.7 tokenizer</text>
-    <text x="644" y="376" class="label">CONTEXT / OUTPUT / TOKENIZER</text>
-    <text x="644" y="394">Same: 1M / 128K / same tokenizer</text>
+  <!-- guide lines -->
+  <line x1="260" y1="280" x2="505" y2="280" stroke="#9ca3af" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="260" y1="190" x2="505" y2="190" stroke="#16a34a" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="480" y1="120" x2="505" y2="120" stroke="#0f766e" stroke-width="1" stroke-dasharray="5 4"/>
 
-    <text x="84" y="424" class="label">TYPICAL TURN</text>
-    <text x="84" y="442">Seconds to minutes</text>
-    <text x="644" y="424" class="label">TYPICAL TURN</text>
-    <text x="644" y="442">Minutes-long turns normal on hard tasks (15 min occurs)</text>
+  <!-- bracket: closable -->
+  <path d="M510,280 L522,280 L522,190 L510,190" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="228" font-size="13" font-weight="bold" fill="#16a34a">closable</text>
+  <text x="530" y="245" font-size="11" fill="#16a34a">behavior</text>
 
-    <text x="84" y="470" class="label">SAFETY / RETENTION</text>
-    <text x="84" y="488" class="small">Standard; ZDR available</text>
-    <text x="644" y="470" class="label">SAFETY / RETENTION</text>
-    <text x="644" y="488" class="small">Extra classifiers (refusal possible); 30-day retention required</text>
+  <!-- bracket: not closable -->
+  <path d="M510,190 L522,190 L522,120 L510,120" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="530" y="150" font-size="13" font-weight="bold" fill="#dc2626">NOT</text>
+  <text x="530" y="166" font-size="11" fill="#dc2626">weights</text>
+
+  <!-- legend -->
+  <g font-size="11" fill="#374151">
+    <rect x="100" y="668" width="14" height="14" fill="#334155" rx="2"/>
+    <text x="120" y="679">default behavior</text>
+    <rect x="230" y="668" width="14" height="14" fill="url(#hatch)" stroke="#16a34a"/>
+    <text x="250" y="679">+ prompt / settings</text>
+    <rect x="390" y="668" width="14" height="14" fill="#0f766e" rx="2"/>
+    <text x="410" y="679">Fable 5 default</text>
   </g>
 
-  <!-- ============ SECTION 2: Where the gap lives ============ -->
-  <text x="60" y="550" class="h2">2. The gap has two components</text>
+  <!-- zone contents, kept to keywords -->
+  <text x="100" y="712" font-size="11" fill="#166534">green: search-first · delegate · verify · autonomy · effort xhigh · adaptive thinking</text>
+  <text x="100" y="734" font-size="11" fill="#991b1b">red: reasoning ceiling · overnight-run coherence</text>
 
-  <!-- Closable -->
-  <rect x="60" y="572" width="520" height="360" class="card" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="84" y="604" class="h3" fill="#16a34a">CLOSABLE with prompting / settings</text>
-  <text x="84" y="624" class="small">Behavioral defaults — Opus 4.8 can do these, but only when told</text>
-  <g class="body">
-    <text x="84" y="656">- Thinking: set {type: "adaptive"} explicitly</text>
-    <text x="84" y="680">- Effort: high / xhigh for coding and agentic work</text>
-    <text x="84" y="704">- Search-first behavior (answers from memory by default)</text>
-    <text x="84" y="728">- Subagent delegation and memory-file use (under-reaches)</text>
-    <text x="84" y="752">- Autonomy: decide minor choices without asking</text>
-    <text x="84" y="776">- Self-verification loops; grounded progress claims</text>
-    <text x="84" y="800">- Full task spec up front in one well-specified turn</text>
-    <text x="84" y="824">- Task Budgets for self-paced agent loops (beta)</text>
-  </g>
-  <rect x="84" y="848" width="472" height="60" fill="#f0fdf4" stroke="#bbf7d0" rx="6"/>
-  <text x="100" y="872" class="small">Key: Opus 4.8 follows instructions very well, so stating the</text>
-  <text x="100" y="888" class="small">trigger condition recovers most Fable-like behavior.</text>
+  <!-- =============== RIGHT: error compounding =============== -->
+  <text x="650" y="122" font-size="15" font-weight="bold" fill="#374151">Why the red zone dominates long runs</text>
 
-  <!-- Not closable -->
-  <rect x="620" y="572" width="520" height="360" class="card" stroke="#dc2626" stroke-width="1.5"/>
-  <text x="644" y="604" class="h3" fill="#dc2626">NOT closable with prompting</text>
-  <text x="644" y="624" class="small">Properties of the weights — instruction text adds no compute</text>
-  <g class="body">
-    <text x="644" y="656">- Raw reasoning ceiling (unsolved stays unsolved at effort max)</text>
-    <text x="644" y="680">- Multi-hour autonomous coherence (overnight-run class)</text>
-    <text x="644" y="704">- First-shot builds of complex, well-specified systems</text>
-    <text x="644" y="728">- Sustained comms with long-running parallel subagents</text>
-    <text x="644" y="752">- Degraded-vision self-preprocessing (bash / crop tools</text>
-    <text x="644" y="768">&#160;&#160;on flipped / blurry / noisy images — explicitly trained)</text>
-    <text x="644" y="792">- Navigating ambiguity without thrashing</text>
-  </g>
-  <rect x="644" y="848" width="472" height="60" fill="#fef2f2" stroke="#fecaca" rx="6"/>
-  <text x="660" y="872" class="small">Mitigation on Opus 4.8: split long tasks into checkpointed</text>
-  <text x="660" y="888" class="small">segments with verification between them.</text>
+  <rect x="650" y="140" width="470" height="280" fill="#fafafa" stroke="#e5e7eb"/>
 
-  <!-- ============ SECTION 3: Error compounding ============ -->
-  <text x="60" y="990" class="h2">3. Why long-horizon coherence dominates: error compounding</text>
-  <text x="60" y="1012" class="small">Completing an n-step task cleanly is roughly p^n (p = per-step success). Illustrative curves, not published benchmarks.</text>
+  <!-- axes -->
+  <text x="700" y="162" font-size="10" fill="#9ca3af">P(complete)</text>
+  <line x1="690" y1="390" x2="1080" y2="390" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="690" y1="390" x2="690" y2="170" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1075" y="408" font-size="10" fill="#9ca3af" text-anchor="end">steps in one autonomous run</text>
 
-  <!-- chart area -->
-  <g>
-    <rect x="100" y="1040" width="700" height="300" fill="#fafafa" stroke="#e5e7eb"/>
-    <!-- axes labels -->
-    <text x="90" y="1050" class="small" text-anchor="end">100%</text>
-    <text x="90" y="1195" class="small" text-anchor="end">50%</text>
-    <text x="90" y="1345" class="small" text-anchor="end">0%</text>
-    <text x="100" y="1360" class="small">0</text>
-    <text x="450" y="1360" class="small" text-anchor="middle">500 steps</text>
-    <text x="800" y="1360" class="small" text-anchor="end">1000 steps</text>
-    <text x="60" y="1030" class="small">Task completion probability</text>
-    <!-- gridlines -->
-    <line x1="100" y1="1190" x2="800" y2="1190" stroke="#e5e7eb" stroke-dasharray="4 4"/>
-    <line x1="450" y1="1040" x2="450" y2="1340" stroke="#e5e7eb" stroke-dasharray="4 4"/>
+  <!-- p = 0.999 (Fable-like) -->
+  <path d="M690,175 C 765 205, 825 235, 885 259 C 945 283, 1015 299, 1060 308"
+        fill="none" stroke="#0f766e" stroke-width="3.5"/>
+  <!-- p = 0.997 (Opus-like) -->
+  <path d="M690,175 C 755 260, 820 315, 885 343 C 950 365, 1015 374, 1060 378"
+        fill="none" stroke="#334155" stroke-width="3.5" stroke-dasharray="8 5"/>
 
-    <!-- p=0.999 curve (Fable-like): points at n=0:1, 250:.78, 500:.61, 750:.47, 1000:.37 -->
-    <path d="M 100 1040 C 250 1085, 350 1122, 450 1157 C 550 1192, 675 1218, 800 1229"
-          fill="none" stroke="#0f766e" stroke-width="3"/>
-    <!-- p=0.997 curve (Opus-like): n=0:1, 250:.47, 500:.22, 750:.105, 1000:.05 -->
-    <path d="M 100 1040 C 220 1160, 330 1240, 450 1274 C 570 1302, 680 1318, 800 1325"
-          fill="none" stroke="#334155" stroke-width="3" stroke-dasharray="7 4"/>
+  <text x="880" y="243" font-size="12" font-weight="bold" fill="#0f766e">99.9% / step</text>
+  <text x="880" y="332" font-size="12" font-weight="bold" fill="#334155">99.7% / step</text>
 
-    <text x="815" y="1233" class="h3 fable">99.9% per step -&gt; 37%</text>
-    <text x="815" y="1329" class="h3 opus">99.7% per step -&gt; 5%</text>
-    <text x="815" y="1253" class="small">completes 1000 steps</text>
-    <text x="815" y="1349" class="small">completes 1000 steps</text>
-  </g>
-  <text x="100" y="1392" class="body">A tiny per-step reliability edge becomes "finishes the overnight run" vs "drifts after two hours".</text>
-  <text x="100" y="1412" class="body">This is a property of the weights, trained for long-horizon autonomous work — not recoverable by prompt text.</text>
+  <!-- endpoint markers -->
+  <circle cx="1060" cy="308" r="4" fill="#0f766e"/>
+  <circle cx="1060" cy="378" r="4" fill="#334155"/>
+  <text x="1070" y="304" font-size="12" font-weight="bold" fill="#0f766e">37%</text>
+  <text x="1070" y="374" font-size="12" font-weight="bold" fill="#334155">5%</text>
 
-  <!-- ============ SECTION 4: Routing ============ -->
-  <text x="60" y="1466" class="h2">4. Practical routing</text>
-  <g class="body">
-    <text x="84" y="1496">Routine and medium tasks -&gt; Opus 4.8 (adaptive thinking + effort high/xhigh + full spec up front) at half the price.</text>
-    <text x="84" y="1520">Hardest reasoning and multi-hour autonomous runs -&gt; Fable 5, with server-side fallbacks to Opus 4.8 enabled.</text>
-  </g>
-  <text x="60" y="1548" class="small">Parameter counts, architecture, and lineage are not public. Source: platform.claude.com docs and anthropic.com/news/claude-fable-5-mythos-5 (2026-07).</text>
+  <text x="650" y="444" font-size="11" fill="#6b7280">tiny per-step edge, compounded = finishes overnight vs drifts (illustrative)</text>
+
+  <!-- =============== BOTTOM RIGHT: fact chips =============== -->
+  <rect x="650" y="480" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
+  <text x="762" y="518" font-size="22" font-weight="bold" fill="#111827" text-anchor="middle">2x</text>
+  <text x="762" y="546" font-size="12" fill="#6b7280" text-anchor="middle">price per token</text>
+
+  <rect x="895" y="480" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
+  <text x="1007" y="512" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">thinking</text>
+  <text x="1007" y="534" font-size="12" fill="#334155" text-anchor="middle">Opus: optional</text>
+  <text x="1007" y="552" font-size="12" fill="#0f766e" text-anchor="middle">Fable: always on</text>
+
+  <rect x="650" y="590" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
+  <text x="762" y="622" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">same limits</text>
+  <text x="762" y="644" font-size="12" fill="#6b7280" text-anchor="middle">1M ctx · 128K out</text>
+  <text x="762" y="662" font-size="12" fill="#6b7280" text-anchor="middle">same tokenizer</text>
+
+  <rect x="895" y="590" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
+  <text x="1007" y="622" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">turn length</text>
+  <text x="1007" y="644" font-size="12" fill="#334155" text-anchor="middle">Opus: sec - min</text>
+  <text x="1007" y="662" font-size="12" fill="#0f766e" text-anchor="middle">Fable: minutes+</text>
+
+  <!-- footer -->
+  <text x="600" y="764" font-size="10" fill="#9ca3af" text-anchor="middle">params / architecture not public - based on API surface and pricing, 2026-07</text>
 </svg>
