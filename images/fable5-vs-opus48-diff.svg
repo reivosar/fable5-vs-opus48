@@ -1,116 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 980" font-family="Helvetica, Arial, sans-serif">
   <defs>
-    <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <rect width="8" height="8" fill="#dcfce7"/>
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#16a34a" stroke-width="2"/>
-    </pattern>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 z" fill="#9ca3af"/>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowRedBack" markerWidth="10" markerHeight="10" refX="3" refY="5" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#dc2626"/>
     </marker>
   </defs>
 
-  <rect width="1200" height="780" fill="#ffffff"/>
+  <rect width="1200" height="980" fill="#ffffff"/>
 
-  <!-- Title -->
-  <text x="600" y="48" font-size="26" font-weight="bold" fill="#111827" text-anchor="middle">Fable 5 vs Opus 4.8</text>
-  <text x="600" y="74" font-size="14" fill="#6b7280" text-anchor="middle">capability gap = closable behavior + non-closable compute</text>
+  <!-- ===================== TITLE ===================== -->
+  <text x="600" y="52" font-size="34" font-weight="bold" fill="#111827" text-anchor="middle">Fable 5 vs Opus 4.8 — what is the difference?</text>
 
-  <!-- =============== LEFT: capability bars =============== -->
-  <text x="80" y="122" font-size="15" font-weight="bold" fill="#374151">What prompting recovers</text>
+  <!-- ===================== PANEL 1: MOUNTAIN ===================== -->
+  <text x="80" y="110" font-size="22" font-weight="bold" fill="#111827">1. How hard a problem can it solve?</text>
 
-  <!-- baseline -->
-  <line x1="100" y1="600" x2="560" y2="600" stroke="#9ca3af" stroke-width="2"/>
+  <!-- mountain -->
+  <polygon points="150,440 450,140 750,440" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="450" y="468" font-size="15" fill="#64748b" text-anchor="middle">height = problem difficulty</text>
 
-  <!-- Opus raw capability bar -->
-  <rect x="140" y="280" width="120" height="320" fill="#334155" rx="4"/>
-  <!-- prompting extension (hatched) -->
-  <rect x="140" y="190" width="120" height="90" fill="url(#hatch)" stroke="#16a34a" stroke-width="2" rx="4"/>
+  <!-- Opus position -->
+  <circle cx="330" cy="260" r="9" fill="#334155"/>
+  <text x="312" y="252" font-size="17" font-weight="bold" fill="#334155" text-anchor="end">Opus 4.8</text>
+  <text x="312" y="272" font-size="13" fill="#64748b" text-anchor="end">gets this high on its own</text>
 
-  <!-- Fable bar -->
-  <rect x="360" y="120" width="120" height="480" fill="#0f766e" rx="4"/>
+  <!-- prompt boost along slope -->
+  <line x1="338" y1="252" x2="382" y2="208" stroke="#16a34a" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <circle cx="390" cy="200" r="9" fill="#16a34a"/>
+  <text x="285" y="185" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="end">better prompts</text>
+  <text x="285" y="204" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="end">push it up a bit</text>
+  <line x1="292" y1="196" x2="376" y2="198" stroke="#16a34a" stroke-width="1" stroke-dasharray="3 3"/>
 
-  <!-- bar labels -->
-  <text x="200" y="628" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Opus 4.8</text>
-  <text x="420" y="628" font-size="15" font-weight="bold" fill="#0f766e" text-anchor="middle">Fable 5</text>
+  <!-- Fable summit flag -->
+  <line x1="450" y1="140" x2="450" y2="98" stroke="#0f766e" stroke-width="3"/>
+  <polygon points="450,98 486,107 450,116" fill="#0f766e"/>
+  <text x="500" y="112" font-size="18" font-weight="bold" fill="#0f766e">Fable 5 reaches the top</text>
 
-  <!-- guide lines -->
-  <line x1="260" y1="280" x2="505" y2="280" stroke="#9ca3af" stroke-width="1" stroke-dasharray="5 4"/>
-  <line x1="260" y1="190" x2="505" y2="190" stroke="#16a34a" stroke-width="1" stroke-dasharray="5 4"/>
-  <line x1="480" y1="120" x2="505" y2="120" stroke="#0f766e" stroke-width="1" stroke-dasharray="5 4"/>
+  <!-- level lines extended to the right -->
+  <line x1="330" y1="260" x2="850" y2="260" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="390" y1="200" x2="850" y2="200" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="450" y1="140" x2="850" y2="140" stroke="#0f766e" stroke-width="1.5" stroke-dasharray="6 5"/>
 
-  <!-- bracket: closable -->
-  <path d="M510,280 L522,280 L522,190 L510,190" fill="none" stroke="#16a34a" stroke-width="2"/>
-  <text x="530" y="228" font-size="13" font-weight="bold" fill="#16a34a">closable</text>
-  <text x="530" y="245" font-size="11" fill="#16a34a">behavior</text>
+  <!-- green gap: closable -->
+  <line x1="830" y1="255" x2="830" y2="205" stroke="#16a34a" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="862" y="238" font-size="16" font-weight="bold" fill="#16a34a">prompts close this gap</text>
 
-  <!-- bracket: not closable -->
-  <path d="M510,190 L522,190 L522,120 L510,120" fill="none" stroke="#dc2626" stroke-width="2"/>
-  <text x="530" y="150" font-size="13" font-weight="bold" fill="#dc2626">NOT</text>
-  <text x="530" y="166" font-size="11" fill="#dc2626">weights</text>
+  <!-- red gap: not closable -->
+  <line x1="830" y1="195" x2="830" y2="145" stroke="#dc2626" stroke-width="4" marker-start="url(#arrowRedBack)" marker-end="url(#arrowRed)"/>
+  <text x="862" y="165" font-size="16" font-weight="bold" fill="#dc2626">nothing closes this gap</text>
+  <text x="862" y="185" font-size="13" fill="#dc2626">it is a bigger model</text>
 
-  <!-- legend -->
-  <g font-size="11" fill="#374151">
-    <rect x="100" y="668" width="14" height="14" fill="#334155" rx="2"/>
-    <text x="120" y="679">default behavior</text>
-    <rect x="230" y="668" width="14" height="14" fill="url(#hatch)" stroke="#16a34a"/>
-    <text x="250" y="679">+ prompt / settings</text>
-    <rect x="390" y="668" width="14" height="14" fill="#0f766e" rx="2"/>
-    <text x="410" y="679">Fable 5 default</text>
+  <!-- ===================== PANEL 2: OVERNIGHT RACE ===================== -->
+  <text x="80" y="545" font-size="22" font-weight="bold" fill="#111827">2. Give it an all-night job</text>
+
+  <!-- time axis -->
+  <line x1="160" y1="585" x2="1030" y2="585" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="160" y="575" font-size="14" fill="#94a3b8">9 pm</text>
+  <text x="590" y="575" font-size="14" fill="#94a3b8" text-anchor="middle">2 am</text>
+  <text x="1020" y="575" font-size="14" fill="#94a3b8" text-anchor="end">6 am</text>
+  <line x1="590" y1="580" x2="590" y2="700" stroke="#f3f4f6" stroke-width="2"/>
+
+  <!-- Opus lane -->
+  <text x="145" y="632" font-size="17" font-weight="bold" fill="#334155" text-anchor="end">Opus 4.8</text>
+  <line x1="160" y1="626" x2="520" y2="626" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#dc2626" stroke-width="6" stroke-linecap="round">
+    <line x1="538" y1="612" x2="566" y2="640"/>
+    <line x1="566" y1="612" x2="538" y2="640"/>
   </g>
+  <line x1="585" y1="626" x2="1030" y2="626" stroke="#d1d5db" stroke-width="3" stroke-dasharray="4 8"/>
+  <text x="600" y="614" font-size="15" font-weight="bold" fill="#dc2626">gets lost along the way</text>
 
-  <!-- zone contents, kept to keywords -->
-  <text x="100" y="712" font-size="11" fill="#166534">green: search-first · delegate · verify · autonomy · effort xhigh · adaptive thinking</text>
-  <text x="100" y="734" font-size="11" fill="#991b1b">red: reasoning ceiling · overnight-run coherence</text>
+  <!-- Fable lane -->
+  <text x="145" y="692" font-size="17" font-weight="bold" fill="#0f766e" text-anchor="end">Fable 5</text>
+  <line x1="160" y1="686" x2="1000" y2="686" stroke="#0f766e" stroke-width="8" stroke-linecap="round"/>
+  <line x1="1005" y1="686" x2="1005" y2="650" stroke="#0f766e" stroke-width="3"/>
+  <polygon points="1005,650 1038,658 1005,666" fill="#0f766e"/>
+  <text x="850" y="674" font-size="15" font-weight="bold" fill="#0f766e">still on track at dawn</text>
 
-  <!-- =============== RIGHT: error compounding =============== -->
-  <text x="650" y="122" font-size="15" font-weight="bold" fill="#374151">Why the red zone dominates long runs</text>
+  <text x="160" y="730" font-size="13" fill="#64748b">Small mistakes snowball on long jobs. Staying on track for hours is what the bigger model buys you.</text>
 
-  <rect x="650" y="140" width="470" height="280" fill="#fafafa" stroke="#e5e7eb"/>
+  <!-- ===================== PANEL 3: PRICE + VERDICT ===================== -->
+  <text x="80" y="795" font-size="22" font-weight="bold" fill="#111827">3. Price</text>
 
-  <!-- axes -->
-  <text x="700" y="162" font-size="10" fill="#9ca3af">P(complete)</text>
-  <line x1="690" y1="390" x2="1080" y2="390" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="690" y1="390" x2="690" y2="170" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="1075" y="408" font-size="10" fill="#9ca3af" text-anchor="end">steps in one autonomous run</text>
+  <!-- Opus: 1 coin -->
+  <text x="205" y="835" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Opus 4.8</text>
+  <circle cx="205" cy="880" r="27" fill="#fcd34d" stroke="#d97706" stroke-width="2.5"/>
+  <text x="205" y="889" font-size="24" font-weight="bold" fill="#92400e" text-anchor="middle">$</text>
 
-  <!-- p = 0.999 (Fable-like) -->
-  <path d="M690,175 C 765 205, 825 235, 885 259 C 945 283, 1015 299, 1060 308"
-        fill="none" stroke="#0f766e" stroke-width="3.5"/>
-  <!-- p = 0.997 (Opus-like) -->
-  <path d="M690,175 C 755 260, 820 315, 885 343 C 950 365, 1015 374, 1060 378"
-        fill="none" stroke="#334155" stroke-width="3.5" stroke-dasharray="8 5"/>
+  <!-- Fable: 2 coins -->
+  <text x="430" y="835" font-size="16" font-weight="bold" fill="#0f766e" text-anchor="middle">Fable 5 = 2x</text>
+  <circle cx="405" cy="880" r="27" fill="#fcd34d" stroke="#d97706" stroke-width="2.5"/>
+  <text x="405" y="889" font-size="24" font-weight="bold" fill="#92400e" text-anchor="middle">$</text>
+  <circle cx="458" cy="880" r="27" fill="#fcd34d" stroke="#d97706" stroke-width="2.5"/>
+  <text x="458" y="889" font-size="24" font-weight="bold" fill="#92400e" text-anchor="middle">$</text>
 
-  <text x="880" y="243" font-size="12" font-weight="bold" fill="#0f766e">99.9% / step</text>
-  <text x="880" y="332" font-size="12" font-weight="bold" fill="#334155">99.7% / step</text>
-
-  <!-- endpoint markers -->
-  <circle cx="1060" cy="308" r="4" fill="#0f766e"/>
-  <circle cx="1060" cy="378" r="4" fill="#334155"/>
-  <text x="1070" y="304" font-size="12" font-weight="bold" fill="#0f766e">37%</text>
-  <text x="1070" y="374" font-size="12" font-weight="bold" fill="#334155">5%</text>
-
-  <text x="650" y="444" font-size="11" fill="#6b7280">tiny per-step edge, compounded = finishes overnight vs drifts (illustrative)</text>
-
-  <!-- =============== BOTTOM RIGHT: fact chips =============== -->
-  <rect x="650" y="480" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
-  <text x="762" y="518" font-size="22" font-weight="bold" fill="#111827" text-anchor="middle">2x</text>
-  <text x="762" y="546" font-size="12" fill="#6b7280" text-anchor="middle">price per token</text>
-
-  <rect x="895" y="480" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
-  <text x="1007" y="512" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">thinking</text>
-  <text x="1007" y="534" font-size="12" fill="#334155" text-anchor="middle">Opus: optional</text>
-  <text x="1007" y="552" font-size="12" fill="#0f766e" text-anchor="middle">Fable: always on</text>
-
-  <rect x="650" y="590" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
-  <text x="762" y="622" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">same limits</text>
-  <text x="762" y="644" font-size="12" fill="#6b7280" text-anchor="middle">1M ctx · 128K out</text>
-  <text x="762" y="662" font-size="12" fill="#6b7280" text-anchor="middle">same tokenizer</text>
-
-  <rect x="895" y="590" width="225" height="90" fill="#f8fafc" stroke="#d1d5db" rx="10"/>
-  <text x="1007" y="622" font-size="15" font-weight="bold" fill="#111827" text-anchor="middle">turn length</text>
-  <text x="1007" y="644" font-size="12" fill="#334155" text-anchor="middle">Opus: sec - min</text>
-  <text x="1007" y="662" font-size="12" fill="#0f766e" text-anchor="middle">Fable: minutes+</text>
+  <!-- verdict box -->
+  <rect x="620" y="815" width="500" height="110" fill="#eef2ff" stroke="#6366f1" stroke-width="2" rx="14"/>
+  <text x="870" y="850" font-size="19" font-weight="bold" fill="#312e81" text-anchor="middle">Everyday work: Opus 4.8 is enough</text>
+  <text x="870" y="890" font-size="19" font-weight="bold" fill="#0f766e" text-anchor="middle">Hardest + overnight jobs: Fable 5</text>
 
   <!-- footer -->
-  <text x="600" y="764" font-size="10" fill="#9ca3af" text-anchor="middle">params / architecture not public - based on API surface and pricing, 2026-07</text>
+  <text x="600" y="962" font-size="12" fill="#9ca3af" text-anchor="middle">Internals (parameter count etc.) are not public. Based on the API surface and pricing, July 2026.</text>
 </svg>

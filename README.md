@@ -1,37 +1,27 @@
-# Claude Fable 5 vs Claude Opus 4.8
+# Fable 5 vs Opus 4.8 — what is the difference?
 
-An analysis of where the difference between Claude Fable 5 (Mythos-class tier)
-and Claude Opus 4.8 actually lives — what is closable with prompting and API
-settings, and what is a property of the model itself.
+One picture:
 
-![Fable 5 vs Opus 4.8 — where the difference lives](images/fable5-vs-opus48-diff.svg)
+![What is the difference](images/fable5-vs-opus48-diff.svg)
 
-## Contents
+## In three lines
 
-| File | Description |
-|---|---|
-| [REPORT.md](REPORT.md) | Detailed report: public facts, capability gap analysis, prompting levers, routing recommendation |
-| [images/fable5-vs-opus48-diff.svg](images/fable5-vs-opus48-diff.svg) | One-page visual summary of the differences |
+1. **Fable 5 solves harder problems.** Better prompts push Opus 4.8 up a
+   bit, but the last stretch never closes — Fable 5 is simply a bigger model.
+2. **Fable 5 survives long jobs.** On an all-night autonomous task, Opus 4.8
+   tends to drift off track; Fable 5 is still on track at dawn.
+3. **Fable 5 costs 2x.** So: everyday work goes to Opus 4.8, only the
+   hardest and longest jobs go to Fable 5.
 
-## TL;DR
+## One paragraph more, if you care
 
-- Fable 5 is a separate, higher model tier — not a tuned Opus 4.8. The 2x
-  price at identical context/output limits reflects genuinely higher
-  inference cost.
-- The gap splits into two parts:
-  - **Behavioral defaults** (search-first, subagent delegation,
-    self-verification, autonomy) — closable on Opus 4.8 with explicit
-    prompting plus `thinking: adaptive` and `effort: high/xhigh`.
-  - **Raw capability** (reasoning ceiling, multi-hour autonomous coherence)
-    — not closable; no instruction text adds compute.
-- Long-horizon coherence dominates in practice because per-step errors
-  compound exponentially over hundreds of steps.
-- Route routine work to a well-configured Opus 4.8; reserve Fable 5 for the
-  hardest reasoning and the longest autonomous runs.
+They are different models, not different settings: Fable 5 is a new tier
+("Mythos class") above the Opus family, priced at exactly 2x with identical
+context and output limits — which means inference genuinely costs more.
+Its thinking step is always on (the API refuses to turn it off), and it is
+trained specifically for long autonomous runs, where tiny per-step errors
+compound exponentially. Parameter counts and architecture are not public;
+everything here comes from the official API surface and pricing.
 
-## Caveats
-
-Parameter counts, training compute, and architecture details are not public.
-This analysis is based on official documentation and the API surface as of
-July 2026. Official announcement:
+Official announcement:
 https://www.anthropic.com/news/claude-fable-5-mythos-5
