@@ -30,14 +30,11 @@ The banner line is the whole theory: habits can be copied, brainpower cannot.
 ## Recommended settings
 
 This repo ships [.claude/settings.json](.claude/settings.json) — the setup
-that makes Opus 4.8 worth it (quality up, cost still half of Fable 5):
-
-- `model: claude-opus-4-8` — half the per-token price of Fable 5
-- `alwaysThinkingEnabled: true` — copies Fable's think-first habit; adaptive
-  thinking only spends tokens when the task needs it
-- `effortLevel: high` — the sweet spot; raise to `xhigh` per hard task
-  instead of pinning it globally
-- `autoCompactEnabled: true` — keeps long sessions from bloating the context
+that makes Opus 4.8 worth it (quality up, cost still half of Fable 5).
+Every value is written out explicitly, including the ones that would
+otherwise be silent defaults. **[.claude/README.md](.claude/README.md) maps
+each line to the exact API request field it controls** — read that to see
+what actually happens on every turn.
 
 Equivalent API call:
 
