@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .h1 { font-size: 28px; font-weight: bold; fill: #1a1a1a; }
+      .h2 { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
+      .h3 { font-size: 15px; font-weight: bold; }
+      .label { font-size: 13px; font-weight: bold; fill: #6b7280; }
+      .body { font-size: 13px; fill: #374151; }
+      .small { font-size: 11px; fill: #6b7280; }
+      .opus { fill: #334155; }
+      .fable { fill: #0f766e; }
+      .card { fill: #ffffff; stroke: #d1d5db; stroke-width: 1; rx: 8; }
+      .opuscard { fill: #f8fafc; stroke: #334155; stroke-width: 1.5; rx: 8; }
+      .fablecard { fill: #f0fdfa; stroke: #0f766e; stroke-width: 1.5; rx: 8; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="56" class="h1">Claude Fable 5 vs Claude Opus 4.8</text>
+  <text x="60" y="84" font-size="16" fill="#6b7280">Where the difference actually lives — and what prompting can / cannot close</text>
+
+  <!-- ============ SECTION 1: Spec comparison ============ -->
+  <text x="60" y="140" class="h2">1. Public facts (API surface and pricing)</text>
+
+  <rect x="60" y="160" width="520" height="330" class="opuscard"/>
+  <text x="84" y="192" class="h3 opus">Claude Opus 4.8</text>
+  <text x="84" y="212" class="small">claude-opus-4-8 — Opus family</text>
+
+  <rect x="620" y="160" width="520" height="330" class="fablecard"/>
+  <text x="644" y="192" class="h3 fable">Claude Fable 5</text>
+  <text x="644" y="212" class="small">claude-fable-5 — Mythos class (new tier above Opus)</text>
+
+  <!-- rows -->
+  <g class="body">
+    <text x="84" y="248" class="label">PRICE / MTok</text>
+    <text x="84" y="266">$5 input / $25 output</text>
+    <text x="644" y="248" class="label">PRICE / MTok</text>
+    <text x="644" y="266">$10 input / $50 output — exactly 2x</text>
+    <text x="644" y="282" class="small">2x price at identical limits = genuinely higher inference cost</text>
+
+    <text x="84" y="312" class="label">THINKING</text>
+    <text x="84" y="330">Optional mode. Omitted = no thinking.</text>
+    <text x="84" y="346">{type: "disabled"} accepted.</text>
+    <text x="644" y="312" class="label">THINKING</text>
+    <text x="644" y="330">Always on at the architecture level.</text>
+    <text x="644" y="346">{type: "disabled"} returns HTTP 400.</text>
+
+    <text x="84" y="376" class="label">CONTEXT / OUTPUT / TOKENIZER</text>
+    <text x="84" y="394">1M / 128K / Opus 4.7 tokenizer</text>
+    <text x="644" y="376" class="label">CONTEXT / OUTPUT / TOKENIZER</text>
+    <text x="644" y="394">Same: 1M / 128K / same tokenizer</text>
+
+    <text x="84" y="424" class="label">TYPICAL TURN</text>
+    <text x="84" y="442">Seconds to minutes</text>
+    <text x="644" y="424" class="label">TYPICAL TURN</text>
+    <text x="644" y="442">Minutes-long turns normal on hard tasks (15 min occurs)</text>
+
+    <text x="84" y="470" class="label">SAFETY / RETENTION</text>
+    <text x="84" y="488" class="small">Standard; ZDR available</text>
+    <text x="644" y="470" class="label">SAFETY / RETENTION</text>
+    <text x="644" y="488" class="small">Extra classifiers (refusal possible); 30-day retention required</text>
+  </g>
+
+  <!-- ============ SECTION 2: Where the gap lives ============ -->
+  <text x="60" y="550" class="h2">2. The gap has two components</text>
+
+  <!-- Closable -->
+  <rect x="60" y="572" width="520" height="360" class="card" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="84" y="604" class="h3" fill="#16a34a">CLOSABLE with prompting / settings</text>
+  <text x="84" y="624" class="small">Behavioral defaults — Opus 4.8 can do these, but only when told</text>
+  <g class="body">
+    <text x="84" y="656">- Thinking: set {type: "adaptive"} explicitly</text>
+    <text x="84" y="680">- Effort: high / xhigh for coding and agentic work</text>
+    <text x="84" y="704">- Search-first behavior (answers from memory by default)</text>
+    <text x="84" y="728">- Subagent delegation and memory-file use (under-reaches)</text>
+    <text x="84" y="752">- Autonomy: decide minor choices without asking</text>
+    <text x="84" y="776">- Self-verification loops; grounded progress claims</text>
+    <text x="84" y="800">- Full task spec up front in one well-specified turn</text>
+    <text x="84" y="824">- Task Budgets for self-paced agent loops (beta)</text>
+  </g>
+  <rect x="84" y="848" width="472" height="60" fill="#f0fdf4" stroke="#bbf7d0" rx="6"/>
+  <text x="100" y="872" class="small">Key: Opus 4.8 follows instructions very well, so stating the</text>
+  <text x="100" y="888" class="small">trigger condition recovers most Fable-like behavior.</text>
+
+  <!-- Not closable -->
+  <rect x="620" y="572" width="520" height="360" class="card" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="644" y="604" class="h3" fill="#dc2626">NOT closable with prompting</text>
+  <text x="644" y="624" class="small">Properties of the weights — instruction text adds no compute</text>
+  <g class="body">
+    <text x="644" y="656">- Raw reasoning ceiling (unsolved stays unsolved at effort max)</text>
+    <text x="644" y="680">- Multi-hour autonomous coherence (overnight-run class)</text>
+    <text x="644" y="704">- First-shot builds of complex, well-specified systems</text>
+    <text x="644" y="728">- Sustained comms with long-running parallel subagents</text>
+    <text x="644" y="752">- Degraded-vision self-preprocessing (bash / crop tools</text>
+    <text x="644" y="768">&#160;&#160;on flipped / blurry / noisy images — explicitly trained)</text>
+    <text x="644" y="792">- Navigating ambiguity without thrashing</text>
+  </g>
+  <rect x="644" y="848" width="472" height="60" fill="#fef2f2" stroke="#fecaca" rx="6"/>
+  <text x="660" y="872" class="small">Mitigation on Opus 4.8: split long tasks into checkpointed</text>
+  <text x="660" y="888" class="small">segments with verification between them.</text>
+
+  <!-- ============ SECTION 3: Error compounding ============ -->
+  <text x="60" y="990" class="h2">3. Why long-horizon coherence dominates: error compounding</text>
+  <text x="60" y="1012" class="small">Completing an n-step task cleanly is roughly p^n (p = per-step success). Illustrative curves, not published benchmarks.</text>
+
+  <!-- chart area -->
+  <g>
+    <rect x="100" y="1040" width="700" height="300" fill="#fafafa" stroke="#e5e7eb"/>
+    <!-- axes labels -->
+    <text x="90" y="1050" class="small" text-anchor="end">100%</text>
+    <text x="90" y="1195" class="small" text-anchor="end">50%</text>
+    <text x="90" y="1345" class="small" text-anchor="end">0%</text>
+    <text x="100" y="1360" class="small">0</text>
+    <text x="450" y="1360" class="small" text-anchor="middle">500 steps</text>
+    <text x="800" y="1360" class="small" text-anchor="end">1000 steps</text>
+    <text x="60" y="1030" class="small">Task completion probability</text>
+    <!-- gridlines -->
+    <line x1="100" y1="1190" x2="800" y2="1190" stroke="#e5e7eb" stroke-dasharray="4 4"/>
+    <line x1="450" y1="1040" x2="450" y2="1340" stroke="#e5e7eb" stroke-dasharray="4 4"/>
+
+    <!-- p=0.999 curve (Fable-like): points at n=0:1, 250:.78, 500:.61, 750:.47, 1000:.37 -->
+    <path d="M 100 1040 C 250 1085, 350 1122, 450 1157 C 550 1192, 675 1218, 800 1229"
+          fill="none" stroke="#0f766e" stroke-width="3"/>
+    <!-- p=0.997 curve (Opus-like): n=0:1, 250:.47, 500:.22, 750:.105, 1000:.05 -->
+    <path d="M 100 1040 C 220 1160, 330 1240, 450 1274 C 570 1302, 680 1318, 800 1325"
+          fill="none" stroke="#334155" stroke-width="3" stroke-dasharray="7 4"/>
+
+    <text x="815" y="1233" class="h3 fable">99.9% per step -&gt; 37%</text>
+    <text x="815" y="1329" class="h3 opus">99.7% per step -&gt; 5%</text>
+    <text x="815" y="1253" class="small">completes 1000 steps</text>
+    <text x="815" y="1349" class="small">completes 1000 steps</text>
+  </g>
+  <text x="100" y="1392" class="body">A tiny per-step reliability edge becomes "finishes the overnight run" vs "drifts after two hours".</text>
+  <text x="100" y="1412" class="body">This is a property of the weights, trained for long-horizon autonomous work — not recoverable by prompt text.</text>
+
+  <!-- ============ SECTION 4: Routing ============ -->
+  <text x="60" y="1466" class="h2">4. Practical routing</text>
+  <g class="body">
+    <text x="84" y="1496">Routine and medium tasks -&gt; Opus 4.8 (adaptive thinking + effort high/xhigh + full spec up front) at half the price.</text>
+    <text x="84" y="1520">Hardest reasoning and multi-hour autonomous runs -&gt; Fable 5, with server-side fallbacks to Opus 4.8 enabled.</text>
+  </g>
+  <text x="60" y="1548" class="small">Parameter counts, architecture, and lineage are not public. Source: platform.claude.com docs and anthropic.com/news/claude-fable-5-mythos-5 (2026-07).</text>
+</svg>
