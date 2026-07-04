@@ -27,7 +27,7 @@
 
   <rect x="85" y="195" width="270" height="54" rx="8" fill="#1e293b"/>
   <text x="220" y="217" font-size="14" font-family="monospace" fill="#e2e8f0" text-anchor="middle">"model":</text>
-  <text x="220" y="238" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">"claude-opus-4-8"</text>
+  <text x="220" y="238" font-size="14" font-family="monospace" fill="#7dd3fc" text-anchor="middle">"claude-sonnet-5"</text>
 
   <!-- dice -->
   <rect x="428" y="218" width="34" height="34" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
@@ -42,7 +42,7 @@
   <!-- flag -->
   <line x1="815" y1="212" x2="815" y2="258" stroke="#0f766e" stroke-width="3"/>
   <polygon points="815,212 845,221 815,230" fill="#0f766e"/>
-  <text x="880" y="225" font-size="13" fill="#374151">Pinned: Opus 4.8 on every turn,</text>
+  <text x="880" y="225" font-size="13" fill="#374151">Pinned: Sonnet 5 on every turn,</text>
   <text x="880" y="248" font-size="13" fill="#374151">on every machine that opens this repo.</text>
 
   <!-- ============ ROW 2: effortLevel ============ -->
@@ -62,7 +62,7 @@
   <circle cx="430" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
   <circle cx="447" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
   <circle cx="464" cy="443" r="8" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
-  <text x="500" y="400" font-size="13" fill="#374151">Claude Code sets Opus to xhigh:</text>
+  <text x="500" y="400" font-size="13" fill="#374151">Claude Code defaults to xhigh:</text>
   <text x="500" y="423" font-size="13" fill="#374151">the strongest — and priciest — level,</text>
   <text x="500" y="446" font-size="13" fill="#374151">even for trivial asks.</text>
 

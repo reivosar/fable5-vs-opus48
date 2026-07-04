@@ -7,8 +7,8 @@ silent defaults, so nothing happens implicitly.
 
 | settings.json key | Field of the API request it controls | Value here | What happens if the key is absent |
 |---|---|---|---|
-| `model` | `model` | `claude-opus-4-8` | Your account's default model (varies by plan) |
-| `effortLevel` | `output_config.effort` | `high` | Claude Code picks its own default (xhigh on Opus-class models — more expensive) |
+| `model` | `model` | `claude-sonnet-5` | Your account's default model (varies by plan) |
+| `effortLevel` | `output_config.effort` | `high` | Claude Code picks its own default (xhigh — more expensive) |
 | `alwaysThinkingEnabled` | `thinking` | `true` -> `{"type": "adaptive"}` | Same (defaults to on), written here so it is visible |
 | `autoCompactEnabled` | server-side history compaction | `true` | Same (defaults to on), written here so it is visible |
 | `fastMode` | `speed` (premium-priced fast output) | `false` | Same (defaults to off) — explicit so nobody enables it by accident |
